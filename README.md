@@ -12,7 +12,7 @@
 
 ### 扫描 Server
 	# 最高速扫描 SSDP 端口保存为 JSON
-	./masscan 202.0.0.0/4 -p1900 --rate 1000000 -oJ ip.json
+	./masscan 0.0.0.0/4 -p1900 --rate 100000000  -oJ ip.json
 	# 转换格式为单 IP 的 TXT
 	python format.py ip.json ip.txt
 
