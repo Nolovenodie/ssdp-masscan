@@ -7,8 +7,7 @@
 ### 安装 Masscan
 	git clone https://github.com/robertdavidgraham/masscan
 	cd masscan
-	make
-	cd bin
+	make && make install
 
 ### 扫描 Server
 	# 安装会话
